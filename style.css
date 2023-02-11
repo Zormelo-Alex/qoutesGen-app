@@ -32,6 +32,9 @@ body{
     padding: 2rem;
     box-shadow: 20px 10px 40px #970c157a;
 }
+.quote{
+    color: white;
+}
 .quote .content p{
     text-align: center;
     font-size: 18px;

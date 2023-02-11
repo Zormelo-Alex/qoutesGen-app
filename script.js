@@ -6,6 +6,7 @@ const btn = document.getElementById("btn")
 const quotecontent = document.querySelector(".content p")
 const author = document.querySelector(".author h3")
 const container = document.querySelector(".container")
+const errmessage = document.querySelector(".quote")
 
 const getQuote = () => {
     container.classList.add("fade");
@@ -16,7 +17,10 @@ const getQuote = () => {
         quotecontent.textContent = `" ${data.content} "`
         author.textContent = data.author
         })
-    .catch(err => console.log(err.message))
+    .catch(err => {
+        console.log(err.message)
+        errmessage.textContent = `Sorry something went wrong... ${err.message}`
+    })
 }
 
 getQuote()
